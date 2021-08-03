@@ -1,5 +1,6 @@
 import './main.css';
 import '../App/app__main.css';
+import Footer from '../Footer/Footer';
 
 // import Promo from '../Promo/Promo';
 // import AboutProject from '../AboutProject/AboutProject';
@@ -15,6 +16,7 @@ function Main() {
       <Techs /> */}
       {/* <NotFoundPage /> */}
       {/* <AuthForm /> */}
+      <Footer />
     </main>
   );
 }
