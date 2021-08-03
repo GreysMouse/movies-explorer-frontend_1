@@ -6,3 +6,11 @@
   color: #8B8B8B;
   text-align: center;
 }
+
+@media screen and (max-width: 560px) {
+  .register__redirect-text {
+    margin: 14px 0 0;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}

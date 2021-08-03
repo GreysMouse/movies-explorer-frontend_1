@@ -13,3 +13,11 @@
   line-height: 1.21;
   color: #fff;
 }
+
+@media screen and (max-width: 560px) {
+  .auth-form__submit-button {
+    margin: 216px 0 0;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
