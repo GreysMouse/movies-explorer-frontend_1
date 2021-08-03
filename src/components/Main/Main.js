@@ -6,7 +6,6 @@ import '../App/app__main.css';
 // import Techs from '../Techs/Techs';
 // import NotFoundPage from '../NotFoundPage/NotFoundPage';
 // import AuthForm from '../AuthForm/AuthForm';
-import Register from '../Register/Register';
 
 function Main() {
   return (
@@ -16,7 +15,6 @@ function Main() {
       <Techs /> */}
       {/* <NotFoundPage /> */}
       {/* <AuthForm /> */}
-      <Register />
     </main>
   );
 }

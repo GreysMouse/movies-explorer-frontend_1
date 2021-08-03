@@ -1,4 +1,4 @@
-.register__redirect-text {
+.auth-page__redirect-text {
   margin: 16px 0 0;
   font-size: 14px;
   font-weight: 400;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 560px) {
-  .register__redirect-text {
+  .auth-page__redirect-text {
     margin: 14px 0 0;
     font-size: 12px;
     line-height: 1.25;

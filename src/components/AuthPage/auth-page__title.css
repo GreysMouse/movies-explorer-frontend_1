@@ -1,4 +1,4 @@
-.register__title {
+.auth-page__title {
   margin: 40px 0 0;
   font-size: 24px;
   font-weight: 500;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 560px) {
-  .register__title {
+  .auth-page__title {
     margin: 50px 0 0;
   }
 }

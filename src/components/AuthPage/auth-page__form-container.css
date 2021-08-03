@@ -1,9 +1,9 @@
-.register__form-container {
+.auth-page__form-container {
   width: 396px;
 }
 
 @media screen and (max-width: 560px) {
-  .register__form-container {
+  .auth-page__form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
