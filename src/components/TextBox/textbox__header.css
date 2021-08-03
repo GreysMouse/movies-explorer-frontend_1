@@ -1,0 +1,8 @@
+.textbox__header {
+  margin: 0;
+  max-width: 550px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+}
