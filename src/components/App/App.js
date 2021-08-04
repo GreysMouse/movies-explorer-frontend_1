@@ -3,13 +3,16 @@ import { Route, Switch } from 'react-router-dom';
 import './app.css';
 
 import Main from '../Main/Main';
+import Techs from '../Techs/Techs';
 import AuthPage from '../AuthPage/AuthPage';
 import AuthFormInput from '../AuthFormInput/AuthFormInput';
 
 function App() {
   return (
     <div className="app">
-      <Main />
+      <Main>
+        <Techs />
+      </Main>
       <Switch>
         <Route path="/signup">
           <AuthPage

@@ -8,3 +8,15 @@
   box-sizing: border-box;
   background-color: #272727;
 }
+
+@media screen and (max-width: 560px) {
+  .techs {
+    padding: 70px 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .techs {
+    padding: 70px 14px;
+  }
+}

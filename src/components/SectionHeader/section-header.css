@@ -8,3 +8,10 @@
   color: #fff;
   border-bottom: 1px solid #dadada;
 }
+
+@media screen and (max-width: 560px) {
+  .section-header {
+    padding-bottom: 28px;
+    font-size: 18px;
+  }
+}

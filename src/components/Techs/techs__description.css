@@ -1,10 +1,18 @@
 .techs__description {
   margin: 26px 0 0;
   max-width: 460px;
-  padding-bottom: 23px;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.43;
   color: #fff;
   text-align: center;
+}
+
+@media screen and (max-width: 560px) {
+  .techs__description {
+    margin: 24px 0 0;
+    max-width: 292px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
 }
