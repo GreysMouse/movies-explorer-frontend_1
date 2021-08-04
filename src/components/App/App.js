@@ -4,6 +4,7 @@ import './app.css';
 
 import Main from '../Main/Main';
 import Techs from '../Techs/Techs';
+import AboutMe from '../AboutMe/AboutMe';
 import AuthPage from '../AuthPage/AuthPage';
 import AuthFormInput from '../AuthFormInput/AuthFormInput';
 
@@ -12,6 +13,7 @@ function App() {
     <div className="app">
       <Main>
         <Techs />
+        <AboutMe />
       </Main>
       <Switch>
         <Route path="/signup">

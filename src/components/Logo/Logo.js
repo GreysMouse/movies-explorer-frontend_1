@@ -1,10 +1,10 @@
-import logoImg from '../../images/logo.svg';
-
 import './logo.css';
+
+import logoImg from '../../images/logo.svg';
 
 function Logo() {
   return (
-    <img className="logo" src={ logoImg } alt="логотип" />
+    <img className="logo" src={ logoImg } alt="Логотип" />
   );
 }
 

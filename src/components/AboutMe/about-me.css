@@ -1,0 +1,22 @@
+.about-me {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: max-content max-content;
+  padding: 110px 70px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 560px) {
+  .about-me {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 70px 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about-me {
+    padding: 70px 14px;
+  }
+}
