@@ -5,7 +5,7 @@
   grid-row-end: 2;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 768px) {
   .about-me__section-header {
     grid-column-start: 1;
     grid-column-end: 2;

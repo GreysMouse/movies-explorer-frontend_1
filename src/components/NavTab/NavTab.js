@@ -1,13 +1,12 @@
-import './navtab.css';
-import './navtab__button.css';
-import '../Promo/promo__navtab.css';
+import './nav-tab.css';
+import './nav-tab__button.css';
 
-function NavTab() {
+function NavTab(props) {
   return (
-    <div className="navtab promo__navtab">
-      <button className="navtab__button">О проекте</button>
-      <button className="navtab__button" >Технологии</button>
-      <button className="navtab__button" >Студент</button>
+    <div className={ "nav-tab " + props.addClasses }>
+      <button className="nav-tab__button">О проекте</button>
+      <button className="nav-tab__button" >Технологии</button>
+      <button className="nav-tab__button" >Студент</button>
     </div>
   );
 }

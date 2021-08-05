@@ -1,0 +1,9 @@
+.promo__nav-tab {
+  margin: 150px 0 30px;
+}
+
+@media screen and (max-width: 370px) {
+  .promo__nav-tab {
+    margin: 212px 0 17px;
+  }
+}

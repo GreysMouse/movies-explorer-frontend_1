@@ -11,7 +11,7 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 768px) {
   .about-me__avatar {
     grid-column-start: 1;
     grid-column-end: 2;

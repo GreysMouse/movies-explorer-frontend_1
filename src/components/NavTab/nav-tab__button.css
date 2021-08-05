@@ -1,0 +1,23 @@
+.nav-tab__button {
+  padding: 0;
+  width: 96px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: #fff;
+  background-color: #303030;
+}
+
+@media screen and (max-width: 370px) {
+  .nav-tab__button {
+    width: 82px;
+    height: 26px;
+    border-radius: 6px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}

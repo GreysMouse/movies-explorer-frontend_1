@@ -1,9 +1,11 @@
 import './header.css';
 
+import Logo from '../Logo/Logo';
+
 function Header() {
   return (
-    <header>
-      
+    <header className="header">
+      <Logo />
     </header>
   );
 }
