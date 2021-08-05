@@ -1,0 +1,15 @@
+.about-project__textbox-title {
+  margin: 0;
+  max-width: 550px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__textbox-title {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}

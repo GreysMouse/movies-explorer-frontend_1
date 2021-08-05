@@ -1,0 +1,16 @@
+.about-project__textbox-text {
+  margin: 26px 0 0;
+  max-width: 550px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .about-project__textbox-text {
+    margin: 16px 0 0;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}

@@ -9,9 +9,10 @@
   border-bottom: 1px solid #dadada;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 950px) {
   .section-header {
     padding-bottom: 28px;
     font-size: 18px;
+    line-height: 1.22;
   }
 }
