@@ -7,7 +7,14 @@
   color: #fff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
+  .about-me__name {
+    font-size: 40px;
+    line-height: 1.18;
+  }
+}
+
+@media screen and (max-width: 425px) {
   .about-me__name {
     font-size: 30px;
     line-height: 1.2;

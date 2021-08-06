@@ -32,6 +32,12 @@ function AboutMe() {
             <Link className="about-me__link">Facebook</Link>
           </li>
           <li>
+            <Link className="about-me__link">Facebook</Link>
+          </li>
+          <li>
+            <Link className="about-me__link">Facebook</Link>
+          </li>
+          <li>
             <Link className="about-me__link">Github</Link>
           </li>
         </ul>
