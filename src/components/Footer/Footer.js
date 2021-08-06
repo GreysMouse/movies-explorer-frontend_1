@@ -25,6 +25,15 @@ function Footer() {
           <li>
             <Link className="footer__link">Facebook</Link>
           </li>
+          <li>
+            <Link className="footer__link">Facebook</Link>
+          </li>
+          <li>
+            <Link className="footer__link">Facebook</Link>
+          </li>
+          <li>
+            <Link className="footer__link">Facebook</Link>
+          </li>
         </ul>
       </div>
     </footer>

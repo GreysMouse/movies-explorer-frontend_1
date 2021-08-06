@@ -5,9 +5,8 @@ import './app__container.css';
 
 import Header from '../Header/Header';
 import Main from '../Main/Main';
+import Footer from '../Footer/Footer';
 import Movies from '../Movies/Movies';
-import Techs from '../Techs/Techs';
-import AboutMe from '../AboutMe/AboutMe';
 import AuthPage from '../AuthPage/AuthPage';
 import AuthFormInput from '../AuthFormInput/AuthFormInput';
 
@@ -19,6 +18,7 @@ function App() {
           <Route exact path="/">
             <Header />
             <Main />
+            <Footer />
           </Route>
           <Route path="/signup">
             <AuthPage
