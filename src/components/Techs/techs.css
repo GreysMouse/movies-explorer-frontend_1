@@ -2,20 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 -70px;
   padding: 100px 70px;
-  width: 100%;
-  box-sizing: border-box;
   background-color: #272727;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 950px) {
   .techs {
-    padding: 70px 40px;
-  }
+    padding: 70px 30px;
+    margin: 0 -30px;
+  }  
 }
 
 @media screen and (max-width: 425px) {
   .techs {
-    padding: 70px 14px;
-  }
+    padding: 70px 0;
+    margin: 0;
+    background-color: unset;
+  }  
 }

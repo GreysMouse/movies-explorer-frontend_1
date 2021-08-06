@@ -8,10 +8,9 @@
   text-align: center;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 500px) {
   .techs__description {
     margin: 24px 0 0;
-    max-width: 292px;
     font-size: 11px;
     line-height: 1.45;
   }
