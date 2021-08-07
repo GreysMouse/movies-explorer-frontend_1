@@ -7,7 +7,15 @@
   color: #fff;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 950px) {
+  .about-project__textbox-text {
+    margin: 22px 0 0;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 425px) {
   .about-project__textbox-text {
     margin: 16px 0 0;
     font-size: 11px;

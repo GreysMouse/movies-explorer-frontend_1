@@ -9,10 +9,12 @@ import './about-me__description.css';
 import './about-me__link-list.css';
 import './about-me__link.css';
 import './about-me__avatar.css';
+import './about-me__portfolio.css';
 
 import avatarImg from '../../images/avatar.png';
 
 import SectionHeader from '../SectionHeader/SectionHeader';
+import Portfolio from '../Portfolio/Portfolio';
 
 function AboutMe() {
   return (
@@ -43,6 +45,7 @@ function AboutMe() {
         </ul>
       </div>
       <img className="about-me__avatar" src={ avatarImg } alt="Аватар студента" />
+      <Portfolio addClasses="about-me__portfolio" />
     </section>
   );
 }

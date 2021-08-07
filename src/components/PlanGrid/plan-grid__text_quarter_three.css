@@ -1,11 +1,18 @@
 .plan-grid__text_quarter_three {
   margin: 14px 0 0;
+  font-weight: 500;
   color: #8B8B8B;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 950px) {
+  .plan-grid__text_quarter_three {
+    font-weight: 400;
+    color: #A0A0A0;
+  }
+}
+
+@media screen and (max-width: 425px) {
   .plan-grid__text_quarter_three {
     margin: 10px 0 0;
-    color: #A0A0A0;
   }
 }

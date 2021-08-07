@@ -7,6 +7,12 @@
 
 @media screen and (max-width: 950px) {
   .app__container {
+    padding: 0 50px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .app__container {
     padding: 0 30px 0;
   }
 }

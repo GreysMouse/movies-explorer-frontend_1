@@ -8,7 +8,13 @@
   list-style: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
+  .about-me__link-list {
+    margin: 87px 0 0;    
+  }
+}
+
+@media screen and (max-width: 600px) {
   .about-me__link-list {
     column-gap: 26px;
     margin: 40px 0 0;    

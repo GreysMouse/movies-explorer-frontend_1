@@ -1,5 +1,6 @@
 import './about-project.css';
 import './about-project__text-container.css';
+import './about-project__textbox.css';
 import './about-project__textbox-title.css';
 import './about-project__textbox-text.css';
 import './about-project__plan-grid.css';
@@ -28,15 +29,15 @@ function AboutProject() {
             У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.
           </p>
         </div>
+        <div className="about-project__textbox">
+          <p className="about-project__textbox-title">
+            На выполнение диплома ушло 5 недель
+          </p>
+          <p className="about-project__textbox-text">
+            У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.
+          </p>
+        </div>
       </div>
-      {/*}
-      <div className="about-project__grid">
-        <p className="about-project__grid-text about-project__grid-text_color_black"></p>
-        <p className="about-project__grid-text about-project__grid-text_color_white"></p>
-        <p className="about-project__grid-text about-project__grid-text_color_grey"></p>
-        <p className="about-project__grid-text about-project__grid-text_color_grey"></p>
-        <div className="about-project__grid-backgroud"></div>
-      </div> */}
       <PlanGrid addClasses="about-project__plan-grid" />
     </section>
   );

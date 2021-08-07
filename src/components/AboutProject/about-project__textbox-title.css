@@ -7,7 +7,7 @@
   color: #fff;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 425px) {
   .about-project__textbox-title {
     font-size: 18px;
     line-height: 1.22;
