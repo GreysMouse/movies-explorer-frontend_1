@@ -1,0 +1,16 @@
+.movie-card__add-button {
+  display: block;
+  margin: 18px auto 0;
+  padding: 0;
+  width: 100px;
+  height: 29px;
+  border: none;
+  outline: none;
+  background: url(../../images/movie-add-button.svg) center/cover;
+}
+
+@media screen and (max-width: 425px) {
+  .movie-card__add-button {
+    margin: 14px auto 0;
+  }
+}

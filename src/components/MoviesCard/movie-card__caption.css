@@ -1,0 +1,14 @@
+.movie-card__caption {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .movie-card__caption {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}

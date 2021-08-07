@@ -9,6 +9,7 @@ import Footer from '../Footer/Footer';
 import Movies from '../Movies/Movies';
 import AuthPage from '../AuthPage/AuthPage';
 import AuthFormInput from '../AuthFormInput/AuthFormInput';
+import MoviesCard from '../MoviesCard/MoviesCard';
 
 function App() {
   return (
@@ -44,7 +45,8 @@ function App() {
             </AuthPage>
           </Route>
           <Route path="/movies">
-            <Movies />
+            <MoviesCard />
+            {/* <Movies /> */}
           </Route>
         </Switch>
       </div>
