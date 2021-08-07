@@ -1,15 +1,8 @@
 .footer {
   padding: 79px 0 20px;
-  box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
-  .footer {
-    padding: 79px 0 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 425px) {
   .footer {
     padding: 79px 0 10px;
   }

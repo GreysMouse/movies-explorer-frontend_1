@@ -9,15 +9,22 @@
   text-align: center;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 950px) {
   .footer__description {
-    font-size: 12px;
-    line-height: 1.25;
+    margin: 0 -20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .footer__description {
+    margin: 0 -15px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .footer__description {
     margin: 0 -4px;
+    font-size: 12px;
+    line-height: 1.25;
   }
 }
