@@ -45,8 +45,9 @@ function App() {
             </AuthPage>
           </Route>
           <Route path="/movies">
-            <MoviesCard />
-            {/* <Movies /> */}
+            <Header />
+            <Movies />
+            <Footer />
           </Route>
         </Switch>
       </div>

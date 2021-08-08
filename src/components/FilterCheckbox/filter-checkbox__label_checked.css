@@ -1,0 +1,4 @@
+.filter-checkbox__label_checked::before {
+  left: 18px;
+  background-color: #2BE080;
+}
