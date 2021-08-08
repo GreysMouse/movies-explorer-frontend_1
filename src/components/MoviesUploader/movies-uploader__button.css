@@ -1,0 +1,21 @@
+.movies-uploader__button {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 320px;
+  height: 36px;
+  border: 1px solid #424242;
+  border-radius: 10px;
+  outline: none;
+  background-color: #202020;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .movies-uploader__button {
+    width: 240px;
+  }
+}
