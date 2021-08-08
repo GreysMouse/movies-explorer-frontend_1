@@ -33,7 +33,25 @@
 }
 
 @media screen and (max-width: 950px) {
+  .filter-checkbox__label {
+    left: unset;
+    right: 0;
+  }
+
   .filter-checkbox__label::after {
     margin: 0 0 0 -133px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .filter-checkbox__label {
+    left: unset;
+    right: 0;
+  }
+
+  .filter-checkbox__label::after {
+    margin: 0 0 0 -112px;
+    font-size: 11px;
+    line-height: 1.64;
   }
 }

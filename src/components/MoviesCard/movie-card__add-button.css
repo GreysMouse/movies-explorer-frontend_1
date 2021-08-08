@@ -9,7 +9,7 @@
   background: url(../../images/movie-add-button.svg) center/cover;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
   .movie-card__add-button {
     margin: 14px auto 0;
   }

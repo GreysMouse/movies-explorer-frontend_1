@@ -10,7 +10,15 @@
   outline: none;
   background-color: rgba(0, 0, 0, 0);
   font-size: 28px;
-  line-height: 1.21;
   font-weight: 500;
+  line-height: 1.21;
   color: #8B8B8B;
+}
+
+@media screen and (max-width: 425px) {
+  .search-form__input {
+    padding: 0 0 15px;
+    font-size: 18px;
+    line-height: 1.22;
+   }
 }

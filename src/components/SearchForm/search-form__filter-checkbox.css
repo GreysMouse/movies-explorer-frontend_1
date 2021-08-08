@@ -12,3 +12,10 @@
     margin: 29px 0 0;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .search-form__filter-checkbox {
+    justify-self: flex-end;
+    margin: 29px 0 0;
+  }
+}
