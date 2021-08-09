@@ -2,9 +2,9 @@ import './movies-card-list.css';
 
 import MoviesCard from '../MoviesCard/MoviesCard';
 
-function MoviesCardList() {
+function MoviesCardList(props) {
   return (
-    <section className="movies-card-list">
+    <section className={ "movies-card-list " + (props.addClasses || "")}>
       <MoviesCard />
       <MoviesCard />
       <MoviesCard />

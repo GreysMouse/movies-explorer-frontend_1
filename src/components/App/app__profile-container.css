@@ -1,0 +1,18 @@
+.app__profile-container {
+  margin: 0 auto 0;
+  padding: 0 70px 0;
+  max-width: 1280px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 950px) {
+  .app__profile-container {
+    padding: 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .app__profile-container {
+    padding: 0 14px 0;
+  }
+}
