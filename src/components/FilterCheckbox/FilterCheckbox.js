@@ -19,7 +19,9 @@ function FilterCheckbox(props) {
         className={ "filter-checkbox__label " + (isChecked ? "filter-checkbox__label_checked" : "")}
         for="filter-checkbox__input"
         onClick={ onFilterCheckboxCheck }
-      />
+      >
+        Короткометражки
+      </label>
     </div>
   );
 }

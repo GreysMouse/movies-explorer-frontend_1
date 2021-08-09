@@ -1,19 +1,25 @@
 .filter-checkbox__label {
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
-  top: 0;
-  left: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.38;
+  color: #fff;
+}
+
+.filter-checkbox__label::before {
+  content: '';
+  margin: 0 14px 0 0;
   width: 36px;
   height: 20px;
   border-radius: 10px;
   background-color: #343434;
 }
 
-.filter-checkbox__label::before {
+.filter-checkbox__label::after {
   content: '';
   position: absolute;
-  top: 2px;
   left: 2px;
   width: 16px;
   height: 16px;
@@ -23,35 +29,28 @@
   background-color: #aaa;
 }
 
-.filter-checkbox__label::after {
-  content: 'Короткометражки';
-  margin: 0 0 0 50px;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.38;
-  color: #fff;
-}
-
 @media screen and (max-width: 950px) {
   .filter-checkbox__label {
-    left: unset;
-    right: 0;
+    flex-direction: row-reverse;
+  }
+
+  .filter-checkbox__label::before {
+    margin: 0 0 0 16px;
   }
 
   .filter-checkbox__label::after {
-    margin: 0 0 0 -133px;
+    left: unset;
+    right: 18px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .filter-checkbox__label {
-    left: unset;
-    right: 0;
-  }
-
-  .filter-checkbox__label::after {
-    margin: 0 0 0 -112px;
     font-size: 11px;
     line-height: 1.64;
+  }
+
+  .filter-checkbox__label::before {
+    margin: 0 0 0 13px;
   }
 }
