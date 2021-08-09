@@ -1,5 +1,5 @@
 .filter-checkbox__label_checked::after {
-  left: 16px;
+  left: 18px;
   background-color: #2BE080;
 }
 
