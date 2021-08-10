@@ -1,5 +1,11 @@
 .auth-page__redirect-link {
   margin-left: 6px;
-  color: #4285F4;
   text-decoration: none;
+  color: #4285F4;  
+}
+
+@media screen and (max-width: 425px) {
+  .auth-page__redirect-link {
+    margin-left: 7px; 
+  }
 }

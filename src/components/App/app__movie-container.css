@@ -1,7 +1,10 @@
 .app__movie-container {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto 0;
   padding: 0 70px 0;
   max-width: 1280px;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
