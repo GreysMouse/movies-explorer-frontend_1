@@ -5,4 +5,9 @@
   line-height: 1.21;
   color: #fff;
   text-decoration: none;
+  transition: opacity 0.2s ease-out;
+}
+
+.about-me__link:hover {
+  opacity: 0.4;
 }

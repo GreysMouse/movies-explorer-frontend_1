@@ -10,7 +10,7 @@ import PlanGrid from '../PlanGrid/PlanGrid';
 
 function AboutProject() {
   return (
-    <section className="about-project">
+    <section className="about-project" id="about-project">
       <SectionHeader>О проекте</SectionHeader>
       <div className="about-project__text-container">
         <div className="about-project__textbox">

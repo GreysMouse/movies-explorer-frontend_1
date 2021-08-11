@@ -4,6 +4,7 @@
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: -0.64px;
+  word-break: break-word;
   color: #fff;
 }
 

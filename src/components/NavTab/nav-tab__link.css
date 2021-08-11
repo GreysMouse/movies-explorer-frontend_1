@@ -1,4 +1,7 @@
-.nav-tab__button {
+.nav-tab__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   width: 96px;
   height: 36px;
@@ -8,12 +11,19 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.33;
+  text-decoration: none;
   color: #fff;
   background-color: #303030;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.nav-tab__link:hover {
+  color: #000;
+  background-color: #2BE080;
 }
 
 @media screen and (max-width: 370px) {
-  .nav-tab__button {
+  .nav-tab__link {
     width: 82px;
     height: 26px;
     border-radius: 6px;

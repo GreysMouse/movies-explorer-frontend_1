@@ -2,9 +2,6 @@ import { Route, Switch } from 'react-router-dom';
 
 import './app.css';
 import './app__container.css';
-import './app__main-container.css';
-import './app__movie-container.css';
-import './app__profile-container.css';
 
 import Header from '../Header/Header';
 import Main from '../Main/Main';

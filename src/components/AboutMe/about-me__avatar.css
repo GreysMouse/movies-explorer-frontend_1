@@ -9,6 +9,7 @@
   height: 327px;
   border-radius: 10px;
   object-fit: cover;
+  object-position: center;
 }
 
 @media screen and (max-width: 950px) {

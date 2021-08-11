@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import './about-me.css';
 import './about-me__section-header.css';
 import './about-me__text-container.css';
@@ -11,17 +9,17 @@ import './about-me__link.css';
 import './about-me__avatar.css';
 import './about-me__portfolio.css';
 
-import avatarImg from '../../images/avatar.png';
+import avatarImg from '../../images/avatar-cat.jpg';
 
 import SectionHeader from '../SectionHeader/SectionHeader';
 import Portfolio from '../Portfolio/Portfolio';
 
 function AboutMe() {
   return (
-    <section className="about-me">
+    <section className="about-me" id="about-me">
       <SectionHeader addClasses="about-me__section-header">Студент</SectionHeader>
       <div className="about-me__text-container">
-        <p className="about-me__name">Виталий</p>
+        <p className="about-me__name">Mouse Greys</p>
         <p className="about-me__bio">Фронтенд-разработчик, 30 лет</p>
         <p className="about-me__description">
           Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена 
@@ -31,16 +29,24 @@ function AboutMe() {
         </p>
         <ul className="about-me__link-list">
           <li>
-            <Link className="about-me__link">Facebook</Link>
+            <a
+              className="about-me__link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
           </li>
           <li>
-            <Link className="about-me__link">Facebook</Link>
-          </li>
-          <li>
-            <Link className="about-me__link">Facebook</Link>
-          </li>
-          <li>
-            <Link className="about-me__link">Github</Link>
+            <a
+              className="about-me__link"
+              href="https://github.com/GreysMouse/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>
           </li>
         </ul>
       </div>

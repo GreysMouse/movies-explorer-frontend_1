@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import './footer.css';
 import './footer__description.css';
 import './footer__container.css';
@@ -17,22 +15,34 @@ function Footer() {
         <p className="footer__copyright">© { currentYear }</p>
         <ul className="footer__link-list">
           <li>
-            <Link className="footer__link">Яндекс.Практикум</Link>
+            <a
+              className="footer__link"
+              href="https://practicum.yandex.ru/"
+              target="_black"
+              rel="noreferrer"
+            >
+              Яндекс.Практикум
+            </a>
           </li>
           <li>
-            <Link className="footer__link">Github</Link>
+            <a
+              className="footer__link"
+              href="https://github.com/GreysMouse/"
+              target="_black"
+              rel="noreferrer"
+            >
+              Github
+            </a>
           </li>
           <li>
-            <Link className="footer__link">Facebook</Link>
-          </li>
-          <li>
-            <Link className="footer__link">Facebook</Link>
-          </li>
-          <li>
-            <Link className="footer__link">Facebook</Link>
-          </li>
-          <li>
-            <Link className="footer__link">Facebook</Link>
+            <a
+              className="footer__link"
+              href="https://www.facebook.com/"
+              target="_black"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
           </li>
         </ul>
       </div>

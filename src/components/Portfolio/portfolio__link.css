@@ -2,32 +2,10 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
-  padding: 20px 0 19px 0;
-  border-bottom: 1px solid #424242;
   text-decoration: none;
+  transition: opacity 0.2s ease-out;
 }
 
-.portfolio__link:first-of-type {
-  margin: 30px 0 0;
-}
-
-.portfolio__link:last-of-type {
-  border-bottom: none;
-  padding: 20px 0 20px 0;
-}
-
-@media screen and (max-width: 950px) {
-  .portfolio__link {
-    border-bottom: 1px solid #E6E6E6;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .portfolio__link {
-    border-bottom: 1px solid #E6E6E6;
-  }
-
-  .portfolio__link:first-of-type {
-    margin: 20px 0 0;
-  }
+.portfolio__link:hover {
+  opacity: 0.4;
 }
