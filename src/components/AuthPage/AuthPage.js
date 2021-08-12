@@ -21,7 +21,12 @@ function AuthPage(props) {
         </AuthForm>
         <p className="auth-page__redirect-text">
           { props.redirectText }
-          <Link className="auth-page__redirect-link">{ props.redirectLinkText }</Link>
+          <Link
+            className="auth-page__redirect-link"
+            to={ props.redirectLink }
+          >
+            { props.redirectLinkText }
+          </Link>
         </p>
       </div>
     </section>
