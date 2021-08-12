@@ -5,3 +5,7 @@
   line-height: 1.2;
   color: #8B8B8B;
 }
+
+.auth-form__input-label:focus-within {
+  color: #eee;
+}

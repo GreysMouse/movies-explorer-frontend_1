@@ -11,3 +11,7 @@
   font-weight: 500;
   color: #fff;
 }
+
+.auth-form__input:focus {
+  border-color: #eee;
+}

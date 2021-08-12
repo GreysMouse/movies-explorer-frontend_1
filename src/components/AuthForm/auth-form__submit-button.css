@@ -12,6 +12,13 @@
   font-weight: 500;
   line-height: 1.21;
   color: #fff;
+  transition: color 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+.auth-form__submit-button:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #eee;
 }
 
 @media screen and (max-width: 425px) {
