@@ -9,7 +9,7 @@ function SearchForm() {
   return (
     <form className="search-form">
       <input className="search-form__input" placeholder="Фильм" />
-      <button className="search-form__submit-button" />
+      <button className="search-form__submit-button">Найти</button>
       <FilterCheckbox addClasses="search-form__filter-checkbox" />
     </form>
   );

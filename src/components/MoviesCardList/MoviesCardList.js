@@ -6,12 +6,8 @@ function MoviesCardList(props) {
   return (
     <section className={ "movies-card-list " + (props.addClasses || "")}>
       <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      {/* <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard /> */}
+      <MoviesCard state="saved" />
+      <MoviesCard state="added" />
     </section>
   );
 }

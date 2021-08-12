@@ -19,7 +19,7 @@ function AboutMe() {
     <section className="about-me" id="about-me">
       <SectionHeader addClasses="about-me__section-header">Студент</SectionHeader>
       <div className="about-me__text-container">
-        <p className="about-me__name">Mouse Greys</p>
+        <p className="about-me__name">Mousemousermouser Greys</p>
         <p className="about-me__bio">Фронтенд-разработчик, 30 лет</p>
         <p className="about-me__description">
           Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена 

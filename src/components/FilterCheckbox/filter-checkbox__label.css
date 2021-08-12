@@ -30,6 +30,14 @@
   transition: left 0.2s ease-in-out, right 0.2s ease-in-out;
 }
 
+.filter-checkbox__label:hover {
+  cursor: pointer;
+}
+
+.filter-checkbox__label:hover::after {
+  background-color: #bbb;
+}
+
 @media screen and (max-width: 950px) {
   .filter-checkbox__label {
     flex-direction: row-reverse;

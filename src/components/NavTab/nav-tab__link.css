@@ -19,7 +19,7 @@
 
 .nav-tab__link:hover {
   color: #000;
-  background-color: #2BE080;
+  background-color: #eee;
 }
 
 @media screen and (max-width: 370px) {
