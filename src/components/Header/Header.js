@@ -9,7 +9,7 @@ function Header(props) {
     <header className="header">
       <Logo />
       <Navigation location={ props.location } />
-      <MenuButton mode={ props.mode } />
+      <MenuButton location={ props.location } onMenuOpen={ props.onMenuOpen } />
     </header>
   );
 }

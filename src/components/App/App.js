@@ -1,3 +1,4 @@
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './app.css';
@@ -14,6 +15,12 @@ import AuthFormInput from '../AuthFormInput/AuthFormInput';
 import Menu from '../Menu/Menu';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  function handleMenuButtonClick() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <div className="app">
       <div className="app__container">
@@ -24,17 +31,17 @@ function App() {
             <Footer />
           </Route>
           <Route path="/movies">
-            <Header location="main" />
+            <Header location="main" onMenuOpen={ handleMenuButtonClick } />
             <Movies />
             <Footer />
           </Route>
           <Route path="/saved-movies">
-            <Header location="main" />
+            <Header location="main" onMenuOpen={ handleMenuButtonClick } />
             <SavedMovies />
             <Footer />
           </Route>
           <Route path="/profile">
-            <Header location="main" />
+            <Header location="main" onMenuOpen={ handleMenuButtonClick } />
             <Profile />
           </Route>
           <Route path="/signup">
@@ -63,7 +70,7 @@ function App() {
             </AuthPage>
           </Route>
         </Switch>
-        <Menu />
+        <Menu isOpen={ isMenuOpen } onMenuOpen={ handleMenuButtonClick } />
       </div>
     </div>
   );

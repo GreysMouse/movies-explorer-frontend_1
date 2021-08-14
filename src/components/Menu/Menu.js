@@ -1,13 +1,17 @@
 import './menu.css';
+import './menu__container.css';
+import './menu_open.css';
 
 import MenuButton from '../MenuButton/MenuButton';
 import Navigation from '../Navigation/Navigation';
 
-function Menu() {
+function Menu(props) {
   return (
-    <aside className="menu">
-      <MenuButton addClasses="menu-button_location_menu" />
-      <Navigation location="menu" />
+    <aside className={ "menu " + (props.isOpen ? 'menu_open' : '') }>
+      <div className="menu__container">
+        <MenuButton location="menu" onMenuOpen={ props.onMenuOpen } />
+        <Navigation location="menu" />
+      </div>
     </aside>
   );
 }
