@@ -1,12 +1,13 @@
 .navigation__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  font-size: 12px;
+  margin: 0 0 0 20px;
+  max-width: 200px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.33;
+  line-height: 1.29;
   text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #fff;
   transition: opacity 0.2s ease-out;
 }
@@ -15,9 +16,20 @@
   opacity: 0.4;
 }
 
+@media screen and (max-width: 768px) {
+  .navigation__link {
+    margin: 28px 0 0;
+    font-size: 18px;
+    line-height: 1.22;
+  }
+
+  .navigation__link:first-of-type {
+    margin-top: 0;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .navigation__link {
-    font-size: 10px;
-    line-height: 1.6;
+    margin: 24px 0 0;
   }
 }

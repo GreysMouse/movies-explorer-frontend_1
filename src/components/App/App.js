@@ -11,6 +11,7 @@ import SavedMovies from '../SavedMovies/SavedMovies';
 import Profile from '../Profile/Profile';
 import AuthPage from '../AuthPage/AuthPage';
 import AuthFormInput from '../AuthFormInput/AuthFormInput';
+import Menu from '../Menu/Menu';
 
 function App() {
   return (
@@ -18,22 +19,22 @@ function App() {
       <div className="app__container">
         <Switch>
           <Route exact path="/">
-            <Header mode="unauthorized" />
+            <Header location="promo" />
             <Main />
             <Footer />
           </Route>
           <Route path="/movies">
-            <Header mode="authorized" />
+            <Header location="main" />
             <Movies />
             <Footer />
           </Route>
           <Route path="/saved-movies">
-            <Header mode="authorized" />
+            <Header location="main" />
             <SavedMovies />
             <Footer />
           </Route>
           <Route path="/profile">
-            <Header mode="authorized" />
+            <Header location="main" />
             <Profile />
           </Route>
           <Route path="/signup">
@@ -62,6 +63,7 @@ function App() {
             </AuthPage>
           </Route>
         </Switch>
+        <Menu />
       </div>
     </div>
   );
