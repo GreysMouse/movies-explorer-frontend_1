@@ -13,6 +13,7 @@ import Profile from '../Profile/Profile';
 import AuthPage from '../AuthPage/AuthPage';
 import AuthFormInput from '../AuthFormInput/AuthFormInput';
 import Menu from '../Menu/Menu';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -68,6 +69,9 @@ function App() {
               <AuthFormInput labelText="E-mail" spanText="Что то пошлое не так" />
               <AuthFormInput labelText="Пароль" spanText="Что то пошлое не так" />
             </AuthPage>
+          </Route>
+          <Route path="/nfp" >
+            <NotFoundPage />
           </Route>
         </Switch>
         <Menu isOpen={ isMenuOpen } onMenuOpen={ handleMenuButtonClick } />

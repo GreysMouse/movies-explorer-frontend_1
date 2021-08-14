@@ -8,9 +8,13 @@
   text-decoration: none;
 }
 
+.not-found-page__backward-link:hover {
+  color: #eee;
+}
+
 @media screen and (max-width: 425px) {
   .not-found-page__backward-link {
-    margin: 284px 0 0;
+    margin: auto 0 30px;
     font-size: 12px;
     line-height: 1.25;
   }
