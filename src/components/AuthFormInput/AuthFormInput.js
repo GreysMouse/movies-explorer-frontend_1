@@ -10,14 +10,15 @@ function AuthFormInput(props) {
         { props.labelText }
         <input
           className="auth-form__input"
-          minLength={ props.minLength || -1 }
-          maxLength={ props.maxLength || -1 }
+          minLength={ props.minLength }
+          maxLength={ props.maxLength }
           placeholder={ props.placeholder }
           autoComplete="off"
           required
           type={ props.type }
           value={ props.value || '' }
           onChange={ props.onChange }
+          onBlur={ props.onBlur }
         />
       </label>
       <span

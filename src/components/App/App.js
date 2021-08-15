@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 
 import './app.css';
 import './app__container.css';
@@ -17,6 +17,16 @@ import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const history = useHistory();
+
+  function handleRegister() {
+    history.push('/signin');
+  }
+
+  function handleLogin() {
+    history.push('/movies');
+  }
 
   function handleMenuButtonClick() {
     setIsMenuOpen(!isMenuOpen);
@@ -46,10 +56,10 @@ function App() {
             <Profile />
           </Route>
           <Route path="/signup">
-            <Register />
+            <Register onRegister={ handleRegister } />
           </Route>
           <Route path="/signin">
-            <Login />
+            <Login onLogin={ handleLogin } />
           </Route>
           <Route path="/nfp" >
             <NotFoundPage />

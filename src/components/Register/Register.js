@@ -3,7 +3,7 @@ import React from 'react';
 import AuthPage from "../AuthPage/AuthPage";
 import AuthFormInput from "../AuthFormInput/AuthFormInput";
 
-function Register() {
+function Register(props) {
   const [userName, setUserName] = React.useState('');
   const [userEmail, setUserEmail] = React.useState('');
   const [userPassword, setUserPassword] = React.useState('');
@@ -20,6 +20,13 @@ function Register() {
   const [isUserEmailSpanVisible, setIsUserEmailSpanVisible] = React.useState(false);
   const [isUserPasswordSpanVisible, setIsUserPasswordSpanVisible] = React.useState(false);
 
+  const [isFormValid, setIsFormValid] = React.useState(true);
+
+  React.useEffect(() => {
+    if (!isValidUserName || !isValidUserEmail || !isValidUserPassword) setIsFormValid(false);
+    else setIsFormValid(true);
+  }, [isValidUserName, isValidUserEmail, isValidUserPassword]);
+
   function handleUserNameInput(evt) {
     const { value, validity: { valid } } = evt.target;
 
@@ -29,6 +36,21 @@ function Register() {
     else setUserNameSpanText('Длина имени должна быть от 2 до 30 символов');
     
     setIsValidUserName(valid);
+  }
+
+  function handleUserNameInputBlur() {
+    if (isValidUserName) setIsUserNameSpanVisible(false);
+    else setIsUserNameSpanVisible(true);
+  }
+
+  function handleUserEmailInputBlur() {
+    if (isValidUserEmail) setIsUserEmailSpanVisible(false);
+    else setIsUserEmailSpanVisible(true);
+  }
+
+  function handleUserPasswordInputBlur() {
+    if (isValidUserPassword) setIsUserPasswordSpanVisible(false);
+    else setIsUserPasswordSpanVisible(true);
   }
 
   function handleUserEmailInput(evt) {
@@ -56,14 +78,7 @@ function Register() {
   function handleSubmit(evt) {
     evt.preventDefault();
 
-    if (isValidUserName) setIsUserNameSpanVisible(false);
-    else setIsUserNameSpanVisible(true);
-
-    if (isValidUserEmail) setIsUserEmailSpanVisible(false);
-    else setIsUserEmailSpanVisible(true);
-
-    if (isValidUserPassword) setIsUserPasswordSpanVisible(false);
-    else setIsUserPasswordSpanVisible(true);
+    props.onRegister();
   }
 
   return (
@@ -71,6 +86,7 @@ function Register() {
       pageTitle="Добро пожаловать!"
       submitButtonText="Зарегистрироваться"
       onSubmit={ handleSubmit }
+      isFormValid={ isFormValid }
       redirectText="Уже зарегистрированы?"
       redirectLink="/signin"
       redirectLinkText="Войти"
@@ -83,6 +99,7 @@ function Register() {
         type="text"
         value={ userName }
         onChange={ handleUserNameInput }
+        onBlur={ handleUserNameInputBlur }
         spanText={ userNameSpanText }
         isSpanVisible={ isUserNameSpanVisible }
       />
@@ -92,6 +109,7 @@ function Register() {
         type="email"
         value={ userEmail }
         onChange={ handleUserEmailInput }
+        onBlur={ handleUserEmailInputBlur }
         spanText={ userEmailSpanText }
         isSpanVisible={ isUserEmailSpanVisible }
       />
@@ -102,6 +120,7 @@ function Register() {
         type="password"
         value={ userPassword }
         onChange={ handleUserPasswordInput }
+        onBlur={ handleUserPasswordInputBlur }
         spanText={ userPasswordSpanText }
         isSpanVisible={ isUserPasswordSpanVisible }
       />

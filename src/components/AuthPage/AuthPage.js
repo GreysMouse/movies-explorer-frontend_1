@@ -20,6 +20,7 @@ function AuthPage(props) {
           addClasses="auth-page__form"
           submitButtonText={ props.submitButtonText }
           onSubmit={ props.onSubmit }
+          isFormValid={ props.isFormValid }
         >
           { props.children }
         </AuthForm>

@@ -1,0 +1,11 @@
+.auth-form__submit-button_disabled {
+  color: #424242;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #424242;
+}
+
+.auth-form__submit-button_disabled:hover {
+  cursor: default;
+  color: #424242;
+  background-color: rgba(0, 0, 0, 0);
+}
