@@ -16,7 +16,11 @@ function AuthPage(props) {
       <div className="auth-page__form-container">
         <Logo />
         <h2 className="auth-page__title">{ props.pageTitle }</h2>
-        <AuthForm addClasses="auth-page__form" submitButtonText={ props.submitButtonText }>
+        <AuthForm
+          addClasses="auth-page__form"
+          submitButtonText={ props.submitButtonText }
+          onSubmit={ props.onSubmit }
+        >
           { props.children }
         </AuthForm>
         <p className="auth-page__redirect-text">

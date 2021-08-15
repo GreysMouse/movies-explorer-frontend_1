@@ -10,8 +10,8 @@ import Footer from '../Footer/Footer';
 import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import Profile from '../Profile/Profile';
-import AuthPage from '../AuthPage/AuthPage';
-import AuthFormInput from '../AuthFormInput/AuthFormInput';
+import Register from '../Register/Register';
+import Login from '../Login/Login';
 import Menu from '../Menu/Menu';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
@@ -46,29 +46,10 @@ function App() {
             <Profile />
           </Route>
           <Route path="/signup">
-            <AuthPage
-              pageTitle="Добро пожаловать!"
-              submitButtonText="Зарегистрироваться"
-              redirectText="Уже зарегистрированы?"
-              redirectLink="/signin"
-              redirectLinkText="Войти"
-            >
-              <AuthFormInput labelText="Имя" spanText="Что то пошлое не так" />
-              <AuthFormInput labelText="E-mail" spanText="Что то пошлое не так" />
-              <AuthFormInput labelText="Пароль" spanText="Что то пошлое не так" />
-            </AuthPage>
+            <Register />
           </Route>
           <Route path="/signin">
-            <AuthPage
-              pageTitle="Рады видеть!"
-              submitButtonText="Войти"
-              redirectText="Ещё не зарегистрированы?"
-              redirectLink="/signup"
-              redirectLinkText="Регистрация"
-            >
-              <AuthFormInput labelText="E-mail" spanText="Что то пошлое не так" />
-              <AuthFormInput labelText="Пароль" spanText="Что то пошлое не так" />
-            </AuthPage>
+            <Login />
           </Route>
           <Route path="/nfp" >
             <NotFoundPage />
