@@ -32,10 +32,32 @@ function Register(props) {
 
     setUserName(value);
 
-    if (!value.length) setUserNameSpanText('Поле не заполнено');
+    if (!value) setUserNameSpanText('Поле не заполнено');
     else setUserNameSpanText('Длина имени должна быть от 2 до 30 символов');
     
     setIsValidUserName(valid);
+  }
+
+  function handleUserEmailInput(evt) {
+    const { value, validity: { valid } } = evt.target;
+
+    setUserEmail(value);
+
+    if (!value) setUserEmailSpanText('Поле не заполнено');
+    else setUserEmailSpanText('Некорректный формат E-mail');
+
+    setIsValidUserEmail(valid);
+  }
+
+  function handleUserPasswordInput(evt) {
+    const { value, validity: { valid } } = evt.target;
+
+    setUserPassword(value);
+
+    if (!value) setUserPasswordSpanText('Поле не заполнено');
+    else setUserPasswordSpanText('Длина пароля должна быть не менее 8 символов');
+
+    setIsValidUserPassword(valid);
   }
 
   function handleUserNameInputBlur() {
@@ -51,28 +73,6 @@ function Register(props) {
   function handleUserPasswordInputBlur() {
     if (isValidUserPassword) setIsUserPasswordSpanVisible(false);
     else setIsUserPasswordSpanVisible(true);
-  }
-
-  function handleUserEmailInput(evt) {
-    const { value, validity: { valid } } = evt.target;
-
-    setUserEmail(value);
-
-    if (!value.length) setUserEmailSpanText('Поле не заполнено');
-    else setUserEmailSpanText('Некорректный формат E-mail');
-
-    setIsValidUserEmail(valid);
-  }
-
-  function handleUserPasswordInput(evt) {
-    const { value, validity: { valid } } = evt.target;
-
-    setUserPassword(value);
-
-    if (!value.length) setUserPasswordSpanText('Поле не заполнено');
-    else setUserPasswordSpanText('Длина пароля должна быть не менее 8 символов');
-
-    setIsValidUserPassword(valid);
   }
 
   function handleSubmit(evt) {

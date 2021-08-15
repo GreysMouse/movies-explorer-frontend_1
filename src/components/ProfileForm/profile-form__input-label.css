@@ -5,9 +5,15 @@
   margin: 0;
   width: 100%;
   border-bottom: 1px solid #424242;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.18;
+  line-height: 1.21;
   white-space: nowrap;
   color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .profile-form__input-label {
+    font-size: 12px;
+  }
 }

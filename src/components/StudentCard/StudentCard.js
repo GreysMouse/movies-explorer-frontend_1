@@ -1,3 +1,7 @@
+import React from 'react';
+
+import userNameContext from '../../contexts/userNameContext';
+
 import './student-card.css';
 import './student-card__text-container.css';
 import './student-card__name.css';
@@ -10,10 +14,12 @@ import './student-card__avatar.css';
 import studentAvatar from '../../images/avatar-cat.jpg';
 
 function StudentCard(props) {
+  const userName = React.useContext(userNameContext);
+
   return (
     <article className={ "student-card " + (props.addClasses || '') }>
       <div className="student-card__text-container">
-        <p className="student-card__name">Mousemousermouser Greys</p>
+        <p className="student-card__name">{ userName }</p>
         <p className="student-card__bio">Фронтенд-разработчик, 100 лет</p>
         <p className="student-card__description">
           Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена 

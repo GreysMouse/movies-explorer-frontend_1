@@ -13,32 +13,29 @@ function Login(props) {
   const [isFormValid, setIsFormValid] = React.useState(true);
 
   React.useEffect(() => {
-    if (!isValidUserEmail || !isValidUserPassword) setIsFormValid(false);
+    if (!userEmail || !userPassword) setIsFormValid(false);
     else setIsFormValid(true);
-  }, [isValidUserEmail, isValidUserPassword]);
+  }, [userEmail, userPassword]);
 
   function handleUserEmailInput(evt) {
-    const { value } = evt.target;
-
-    if (!value) setIsValidUserEmail(false);
-    else setIsValidUserEmail(true);
+    const { value, validity: { valid } } = evt.target;
 
     setUserEmail(value);
+    setIsValidUserEmail(valid);   
   }
 
   function handleUserPasswordInput(evt) {
-    const { value } = evt.target;
-
-    if (!value) setIsValidUserPassword(false);
-    else setIsValidUserPassword(true);
+    const { value, validity: { valid } } = evt.target;
 
     setUserPassword(value);
+    setIsValidUserPassword(valid);
   }
 
   function handleSubmit(evt) {
     evt.preventDefault();
 
-    props.onLogin();
+    if (!isValidUserEmail || !isValidUserPassword) alert('!');
+    else props.onLogin();
   }
 
   return (
@@ -61,6 +58,7 @@ function Login(props) {
         isSpanVisible={ false }
       />
       <AuthFormInput
+        minLength="8"
         placeholder="Введите пароль"
         labelText="Пароль"
         type="password"

@@ -4,6 +4,8 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 import './app.css';
 import './app__container.css';
 
+import userNameContext from '../../contexts/userNameContext';
+
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
@@ -16,6 +18,8 @@ import Menu from '../Menu/Menu';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 function App() {
+  const [userName, setUserName] = React.useState('Mouse Greys');
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const history = useHistory();
@@ -28,46 +32,56 @@ function App() {
     history.push('/movies');
   }
 
+  function handleLogout() {
+    history.push('/signin');
+  }
+
+  function handleUserUpdate() {
+    // тут будет setUserName
+  }
+
   function handleMenuButtonClick() {
     setIsMenuOpen(!isMenuOpen);
   }
 
   return (
-    <div className="app">
-      <div className="app__container">
-        <Switch>
-          <Route exact path="/">
-            <Header location="promo" />
-            <Main />
-            <Footer />
-          </Route>
-          <Route path="/movies">
-            <Header location="main" onMenuOpen={ handleMenuButtonClick } />
-            <Movies />
-            <Footer />
-          </Route>
-          <Route path="/saved-movies">
-            <Header location="main" onMenuOpen={ handleMenuButtonClick } />
-            <SavedMovies />
-            <Footer />
-          </Route>
-          <Route path="/profile">
-            <Header location="main" onMenuOpen={ handleMenuButtonClick } />
-            <Profile />
-          </Route>
-          <Route path="/signup">
-            <Register onRegister={ handleRegister } />
-          </Route>
-          <Route path="/signin">
-            <Login onLogin={ handleLogin } />
-          </Route>
-          <Route path="/nfp" >
-            <NotFoundPage />
-          </Route>
-        </Switch>
-        <Menu isOpen={ isMenuOpen } onMenuOpen={ handleMenuButtonClick } />
+    <userNameContext.Provider value={ userName }>
+      <div className="app">
+        <div className="app__container">
+          <Switch>
+            <Route exact path="/">
+              <Header location="promo" />
+              <Main />
+              <Footer />
+            </Route>
+            <Route path="/movies">
+              <Header location="main" onMenuOpen={ handleMenuButtonClick } />
+              <Movies />
+              <Footer />
+            </Route>
+            <Route path="/saved-movies">
+              <Header location="main" onMenuOpen={ handleMenuButtonClick } />
+              <SavedMovies />
+              <Footer />
+            </Route>
+            <Route path="/profile">
+              <Header location="main" onMenuOpen={ handleMenuButtonClick } />
+              <Profile onUserUpdate={ handleUserUpdate } onLogout={ handleLogout } />
+            </Route>
+            <Route path="/signup">
+              <Register onRegister={ handleRegister } />
+            </Route>
+            <Route path="/signin">
+              <Login onLogin={ handleLogin } />
+            </Route>
+            <Route path="/nfp" >
+              <NotFoundPage />
+            </Route>
+          </Switch>
+          <Menu isOpen={ isMenuOpen } onMenuOpen={ handleMenuButtonClick } />
+        </div>
       </div>
-    </div>
+    </userNameContext.Provider>
   );
 }
 
