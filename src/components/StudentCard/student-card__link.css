@@ -1,4 +1,4 @@
-.about-me__link {
+.student-card__link {
   margin: 0;
   font-size: 14px;
   font-weight: 500;
@@ -8,6 +8,6 @@
   transition: opacity 0.2s ease-out;
 }
 
-.about-me__link:hover {
+.student-card__link:hover {
   opacity: 0.4;
 }

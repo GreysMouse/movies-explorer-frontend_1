@@ -1,22 +1,22 @@
-.about-me__description {
-  margin: 26px 0 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.57;
+.student-card__bio {
+  margin: 18px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.11;
   word-break: break-word;
   color: #fff;
 }
 
 @media screen and (max-width: 950px) {
-  .about-me__description {
-    margin: 20px 0 0;
+  .student-card__bio {
+    margin: 16px 0 0;
     font-size: 12px;
     line-height: 1.5;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .about-me__description {
+  .student-card__bio {
     margin: 20px 0 0;
     font-size: 11px;
     line-height: 1.45;

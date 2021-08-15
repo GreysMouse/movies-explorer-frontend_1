@@ -1,24 +1,22 @@
-.about-me__name {
+.student-card__name {
   margin: 0;
   font-size: 50px;
   font-weight: 400;
   line-height: 1.16;
   letter-spacing: -0.64px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* word-break: break-word; */
+  word-break: break-word;
   color: #fff;
 }
 
 @media screen and (max-width: 950px) {
-  .about-me__name {
+  .student-card__name {
     font-size: 40px;
     line-height: 1.0;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .about-me__name {
+  .student-card__name {
     font-size: 30px;
     line-height: 1.2;
   }
