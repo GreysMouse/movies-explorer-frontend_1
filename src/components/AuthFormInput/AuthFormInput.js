@@ -16,7 +16,7 @@ function AuthFormInput(props) {
           autoComplete="off"
           required
           type={ props.type }
-          value={ props.value || '' }
+          value={ props.value }
           onChange={ props.onChange }
           onBlur={ props.onBlur }
         />

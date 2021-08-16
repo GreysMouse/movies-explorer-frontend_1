@@ -4,7 +4,7 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 import './app.css';
 import './app__container.css';
 
-import userNameContext from '../../contexts/userNameContext';
+import currentUserContext from '../../contexts/currentUserContext';
 
 import Header from '../Header/Header';
 import Main from '../Main/Main';
@@ -17,8 +17,19 @@ import Login from '../Login/Login';
 import Menu from '../Menu/Menu';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
+import studentAvatar from '../../images/avatar-cat.jpg';
+
 function App() {
-  const [userName, setUserName] = React.useState('Mouse Greys');
+  const [ currentUser, setCurrentUser ] = React.useState({
+    name: 'Mouse Greys',
+    bio: 'Фронтенд-разработчик, 100 лет',
+    description: 'Обучаюсь в Яндекс Практикум уже 11-ый месяц).',
+    avatar: studentAvatar,
+    links: [
+      { linkName: 'Facebook', link: 'https://www.facebook.com/' },
+      { linkName: 'Github', link: 'https://github.com/GreysMouse/' }
+    ]
+  });
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -37,7 +48,7 @@ function App() {
   }
 
   function handleUserUpdate() {
-    // тут будет setUserName
+    // тут будет setCurrentUser
   }
 
   function handleMenuButtonClick() {
@@ -45,7 +56,7 @@ function App() {
   }
 
   return (
-    <userNameContext.Provider value={ userName }>
+    <currentUserContext.Provider value={ currentUser }>
       <div className="app">
         <div className="app__container">
           <Switch>
@@ -74,14 +85,14 @@ function App() {
             <Route path="/signin">
               <Login onLogin={ handleLogin } />
             </Route>
-            <Route path="/nfp" >
+            <Route path="*">
               <NotFoundPage />
             </Route>
           </Switch>
           <Menu isOpen={ isMenuOpen } onMenuOpen={ handleMenuButtonClick } />
         </div>
       </div>
-    </userNameContext.Provider>
+    </currentUserContext.Provider>
   );
 }
 

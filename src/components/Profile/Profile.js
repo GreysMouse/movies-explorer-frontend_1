@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import userNameContext from '../../contexts/userNameContext';
+import currentUserContext from '../../contexts/currentUserContext';
 
 import './profile.css';
 import './profile__form-container.css';
@@ -12,12 +12,12 @@ import './profile__logout-link.css';
 import ProfileForm from '../ProfileForm/ProfileForm';
 
 function Profile(props) {
-  const userName = React.useContext(userNameContext);
+  const currentUser = React.useContext(currentUserContext);
 
   return (
     <section className="profile">
       <div className="profile__form-container">
-        <h2 className="profile__title">{ `Привет, ${userName}` }</h2>
+        <h2 className="profile__title">{ `Привет, ${ currentUser }` }</h2>
         <ProfileForm
           addClasses="profile__form"
           onUserUpdate={ props.onUserUpdate }
