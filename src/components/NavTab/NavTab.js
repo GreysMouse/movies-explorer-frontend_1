@@ -5,7 +5,7 @@ import './nav-tab__link.css';
 
 function NavTab(props) {
   return (
-    <div className={ "nav-tab " + props.addClasses }>
+    <div className={ 'nav-tab ' + props.addClasses }>
       <HashLink className="nav-tab__link" to="/#about-project">О проекте</HashLink>
       <HashLink className="nav-tab__link" to="/#techs">Технологии</HashLink>
       <HashLink className="nav-tab__link" to="/#about-me">Студент</HashLink>    

@@ -10,7 +10,7 @@ import './plan-grid__text_quarter_four.css';
 
 function PlanGrid(props) {
   return (
-    <div className={ "plan-grid " + props.addClasses }>
+    <div className={ 'plan-grid ' + props.addClasses }>
       <div className="plan-grid__background plan-grid__background_color_green">
         <p className="plan-grid__text plan-grid__text_quarter_one">1 неделя</p>
       </div>

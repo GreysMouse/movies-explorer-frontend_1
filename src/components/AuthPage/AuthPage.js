@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 
+import Logo from '../Logo/Logo';
+import AuthForm from '../AuthForm/AuthForm';
+
 import './auth-page.css';
 import './auth-page__form-container.css';
 import './auth-page__title.css';
 import './auth-page__form.css';
 import './auth-page__redirect-text.css';
 import './auth-page__redirect-link.css';
-
-import Logo from '../Logo/Logo';
-import AuthForm from '../AuthForm/AuthForm';
 
 function AuthPage(props) {
   return (

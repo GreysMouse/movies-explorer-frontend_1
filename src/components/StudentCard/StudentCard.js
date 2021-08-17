@@ -1,6 +1,7 @@
 import React from 'react';
 
 import currentUserContext from '../../contexts/currentUserContext';
+import defaultStudentAvatar from '../../images/default-student-avatar.svg';
 
 import './student-card.css';
 import './student-card__text-container.css';
@@ -15,28 +16,32 @@ function StudentCard(props) {
   const currentUser = React.useContext(currentUserContext);
 
   return (
-    <article className={ "student-card " + (props.addClasses || '') }>
+    <article className={ 'student-card ' + (props.addClasses || '') }>
       <div className="student-card__text-container">
         { currentUser.name && <p className="student-card__name">{ currentUser.name }</p> }
         { currentUser.bio && <p className="student-card__bio">{ currentUser.bio }</p> }
         { currentUser.description && <p className="student-card__description">{ currentUser.description }</p> }
-        { currentUser.links.length !== 0 && 
+        { currentUser.accounts.length !== 0 && 
           <ul className="student-card__link-list">
             {
-              currentUser.links.map((link, i) => {
+              currentUser.accounts.map((account, i) => {
                 return (
                   <li key={ i }>
-                    <a className="student-card__link" href={ link.link } target="_blank" rel="noreferrer">
-                      { link.linkName }
+                    <a className="student-card__link" href={ account.link } target="_blank" rel="noreferrer">
+                      { account.name }
                     </a>
                   </li>
-                )
+                );
               })
             }
           </ul>
         }
       </div>
-      <img className="student-card__avatar" src={ currentUser.avatar } alt="Аватар студента" />
+      <img
+        className="student-card__avatar"
+        src={ currentUser.avatar || defaultStudentAvatar } 
+        alt="Аватар студента"
+      />
     </article>
   );
 }

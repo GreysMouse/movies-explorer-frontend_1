@@ -1,10 +1,8 @@
 import React from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 
-import './app.css';
-import './app__container.css';
-
 import currentUserContext from '../../contexts/currentUserContext';
+import currentUserAvatar from '../../images/current-user-avatar.jpg';
 
 import Header from '../Header/Header';
 import Main from '../Main/Main';
@@ -17,17 +15,23 @@ import Login from '../Login/Login';
 import Menu from '../Menu/Menu';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
-import studentAvatar from '../../images/avatar-cat.jpg';
+import './app.css';
+import './app__container.css';
 
 function App() {
   const [ currentUser, setCurrentUser ] = React.useState({
-    name: 'Mouse Greys',
-    bio: 'Фронтенд-разработчик, 100 лет',
-    description: 'Обучаюсь в Яндекс Практикум уже 11-ый месяц).',
-    avatar: studentAvatar,
-    links: [
-      { linkName: 'Facebook', link: 'https://www.facebook.com/' },
-      { linkName: 'Github', link: 'https://github.com/GreysMouse/' }
+    name: 'Диана',
+    bio: 'Фронтенд-разработчик, 24 года',
+    description: 'Живу в городе Ярославль. Закончила физический факультет по специальности электроника и наноэлектроника. Люблю решать математические задачки. В настоящее время обучаюсь в Яндекс Практикум.',
+    avatar: currentUserAvatar,
+    accounts: [
+      { name: 'Facebook', link: 'https://www.facebook.com/' },
+      { name: 'Github', link: 'https://github.com/GreysMouse/' }
+    ],
+    portfolio: [
+      { name: 'Статичный сайт', link: 'https://github.com/GreysMouse/how-to-learn/' },
+      { name: 'Адаптивный сайт', link: 'https://github.com/GreysMouse/russian-travel/' },
+      { name: 'Одностраничное приложение', link: 'https://github.com/GreysMouse/react-mesto-api-full/' }
     ]
   });
 

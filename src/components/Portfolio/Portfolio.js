@@ -1,3 +1,7 @@
+import React from 'react';
+
+import currentUserContext from '../../contexts/currentUserContext';
+
 import './portfolio.css';
 import './portfolio__title.css';
 import './portfolio__link-container.css';
@@ -5,43 +9,30 @@ import './portfolio__link.css';
 import './portfolio__link-text.css';
 
 function Portfolio(props) {
+  const currentUser = React.useContext(currentUserContext);
+
   return (
-    <article className={ "portfolio " + (props.addClasses || "") }>
-      <h3 className="portfolio__title">Портфолио</h3>
-      <div className="portfolio__link-container">
-        <a
-          className="portfolio__link"
-          href="https://github.com/GreysMouse/how-to-learn/"
-          target="_black"
-          rel="noreferrer"
-        >
-          <p className="portfolio__link-text">Статичный сайт</p>
-          <p className="portfolio__link-text">↗</p>
-        </a>
-      </div>
-      <div className="portfolio__link-container">
-        <a
-          className="portfolio__link"
-          href="https://github.com/GreysMouse/russian-travel/"
-          target="_black"
-          rel="noreferrer"
-        >
-          <p className="portfolio__link-text">Адаптивный сайт</p>
-          <p className="portfolio__link-text">↗</p>
-        </a>
-      </div>
-      <div className="portfolio__link-container">
-        <a
-          className="portfolio__link"
-          href="https://github.com/GreysMouse/react-mesto-api-full/"
-          target="_black"
-          rel="noreferrer"
-        >
-          <p className="portfolio__link-text">Одностраничное приложение</p>
-          <p className="portfolio__link-text">↗</p>
-        </a>
-      </div>
-    </article>
+    currentUser.portfolio.length !== 0 &&
+      <article className={ 'portfolio ' + (props.addClasses || '') }>
+        <h3 className="portfolio__title">Портфолио</h3>
+        {
+          currentUser.portfolio.map((app, i) => {
+            return (
+              <div className="portfolio__link-container" key={ i }>
+                <a
+                  className="portfolio__link"
+                  href={ app.link }
+                  target="_black"
+                  rel="noreferrer"
+                >
+                  <p className="portfolio__link-text">{ app.name }</p>
+                  <p className="portfolio__link-text">↗</p>
+                </a>
+              </div>
+            );
+          })
+        }
+      </article>
   );
 }
 

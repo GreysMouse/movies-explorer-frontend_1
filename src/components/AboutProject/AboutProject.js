@@ -1,12 +1,12 @@
+import SectionHeader from '../SectionHeader/SectionHeader';
+import PlanGrid from '../PlanGrid/PlanGrid';
+
 import './about-project.css';
 import './about-project__text-container.css';
 import './about-project__textbox.css';
 import './about-project__textbox-title.css';
 import './about-project__textbox-text.css';
 import './about-project__plan-grid.css';
-
-import SectionHeader from '../SectionHeader/SectionHeader';
-import PlanGrid from '../PlanGrid/PlanGrid';
 
 function AboutProject() {
   return (

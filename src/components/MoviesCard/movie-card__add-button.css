@@ -18,7 +18,7 @@
 .movie-card__add-button:hover {
   cursor: pointer;
   color: #000;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 767px) {

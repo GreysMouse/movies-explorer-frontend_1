@@ -1,4 +1,8 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+
+import currentUserContext from '../../contexts/currentUserContext';
+import defaultStudentAvatar from '../../images/default-student-avatar.svg';
 
 import './navigation.css';
 import './navigation_location_promo.css';
@@ -11,11 +15,11 @@ import './navigation__link_type_login.css';
 import './navigation__link_type_profile.css';
 import './navigation__profile-avatar.css';
 
-import profileAvatar from '../../images/header-avatar.svg';
-
 function Navigation(props) {
+  const currentUser = React.useContext(currentUserContext);
+
   return (
-    <nav className={ "navigation " + (props.location ? `navigation_location_${props.location}` : '') }>
+    <nav className={ 'navigation ' + (props.location ? `navigation_location_${props.location}` : '') }>
       { props.location === 'promo' &&
         (
           <>
@@ -57,7 +61,11 @@ function Navigation(props) {
               to="/profile"
             >
               Аккаунт
-              <img className="navigation__profile-avatar" src={ profileAvatar } alt="Аватар пользователя" />
+              <img
+                className="navigation__profile-avatar"
+                src={ currentUser.avatar || defaultStudentAvatar }
+                alt="Аватар студента"
+              />
             </NavLink>
           </>
         )
@@ -93,7 +101,10 @@ function Navigation(props) {
               to="/profile"
             >
               Аккаунт
-              <img className="navigation__profile-avatar" src={ profileAvatar } alt="Аватар пользователя" />
+              <img
+                className="navigation__profile-avatar"
+                src={ currentUser.avatar || defaultStudentAvatar }
+                alt="Аватар студента" />
             </NavLink>
           </>
         )

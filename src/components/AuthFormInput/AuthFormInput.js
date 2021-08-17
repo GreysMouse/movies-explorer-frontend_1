@@ -22,7 +22,7 @@ function AuthFormInput(props) {
         />
       </label>
       <span
-        className={ "auth-form__input-span " + (props.isSpanVisible ? 'auth-form__input-span_visible' : '') }
+        className={ 'auth-form__input-span ' + (props.isSpanVisible ? 'auth-form__input-span_visible' : '') }
       >
         { props.spanText || 'Что-то пошло не так...' }
       </span>

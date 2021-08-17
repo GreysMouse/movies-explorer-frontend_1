@@ -35,7 +35,7 @@ function ProfileForm(props) {
   }
 
   return (
-    <form className={ "profile-form " + (props.addClasses || '') }>
+    <form className={ 'profile-form ' + (props.addClasses || '') }>
       <label className="profile-form__input-label">
         Имя
         <input

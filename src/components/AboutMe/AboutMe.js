@@ -1,11 +1,11 @@
+import SectionHeader from '../SectionHeader/SectionHeader';
+import Portfolio from '../Portfolio/Portfolio';
+import StudentCard from '../StudentCard/StudentCard';
+
 import './about-me.css';
 import './about-me__section-header.css';
 import './about-me__student-card.css';
 import './about-me__portfolio.css';
-
-import SectionHeader from '../SectionHeader/SectionHeader';
-import Portfolio from '../Portfolio/Portfolio';
-import StudentCard from '../StudentCard/StudentCard';
 
 function AboutMe() {
   return (

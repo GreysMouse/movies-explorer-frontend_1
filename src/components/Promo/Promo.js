@@ -1,9 +1,9 @@
+import NavTab from '../NavTab/NavTab';
+
 import './promo.css';
 import './promo__banner.css';
 import './promo__title.css';
 import './promo__nav-tab.css';
-
-import NavTab from '../NavTab/NavTab';
 
 function Promo() {
   return (

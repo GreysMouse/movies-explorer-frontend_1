@@ -1,11 +1,11 @@
-import './movies-card-list.css';
-
 import MoviesCard from '../MoviesCard/MoviesCard';
+
+import './movies-card-list.css';
 
 function MoviesCardList(props) {
   return (
-    <section className={ "movies-card-list " + (props.addClasses || "")}>
-      <MoviesCard onMovieSave={ props.onMovieSave } />
+    <section className={ 'movies-card-list ' + (props.addClasses || '')}>
+      <MoviesCard />
       <MoviesCard state="saved" />
       <MoviesCard state="added" />
     </section>

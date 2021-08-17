@@ -1,8 +1,8 @@
-import './header.css';
-
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import MenuButton from '../MenuButton/MenuButton';
+
+import './header.css';
 
 function Header(props) {
   return (

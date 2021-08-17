@@ -1,8 +1,8 @@
-import './saved-movies.css';
-import './saved-movies__movies-card-list.css';
-
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
+
+import './saved-movies.css';
+import './saved-movies__movies-card-list.css';
 
 function SavedMovies() {
   return (

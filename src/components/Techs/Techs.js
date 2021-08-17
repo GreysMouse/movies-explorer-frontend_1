@@ -1,10 +1,10 @@
+import SectionHeader from '../SectionHeader/SectionHeader';
+
 import './techs.css';
 import './techs__title.css';
 import './techs__description.css';
 import './techs__link-list.css';
 import './techs__link.css';
-
-import SectionHeader from '../SectionHeader/SectionHeader';
 
 function Techs() {
   return (
