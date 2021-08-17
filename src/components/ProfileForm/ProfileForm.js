@@ -38,7 +38,7 @@ function ProfileForm(props) {
   function handleSubmit(evt) {
     evt.preventDefault();
 
-    if (!isValidUserName || !isValidUserEmail) alert('!');
+    if (!isValidUserName || !isValidUserEmail) alert('Тут будет модальное окно');
     else props.onUserUpdate();
   }
 
