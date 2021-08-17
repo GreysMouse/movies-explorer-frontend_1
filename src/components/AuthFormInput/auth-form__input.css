@@ -14,7 +14,7 @@
 }
 
 .auth-form__input:focus {
-  border-color: #eee;
+  border-color: #fff;
 }
 
 .auth-form__input::placeholder {

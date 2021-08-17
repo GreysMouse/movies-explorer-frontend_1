@@ -4,18 +4,18 @@ import AuthPage from "../AuthPage/AuthPage";
 import AuthFormInput from "../AuthFormInput/AuthFormInput";
 
 function Login(props) {
-  const [userEmail, setUserEmail] = React.useState('');
-  const [userPassword, setUserPassword] = React.useState('');
+  const [ userEmail, setUserEmail ] = React.useState('');
+  const [ userPassword, setUserPassword ] = React.useState('');
 
-  const [isValidUserEmail, setIsValidUserEmail] = React.useState(false);
-  const [isValidUserPassword, setIsValidUserPassword] = React.useState(false);
+  const [ isValidUserEmail, setIsValidUserEmail ] = React.useState(false);
+  const [ isValidUserPassword, setIsValidUserPassword ] = React.useState(false);
 
-  const [isFormValid, setIsFormValid] = React.useState(true);
+  const [ isFormValid, setIsFormValid ] = React.useState(true);
 
   React.useEffect(() => {
     if (!userEmail || !userPassword) setIsFormValid(false);
     else setIsFormValid(true);
-  }, [userEmail, userPassword]);
+  }, [ userEmail, userPassword ]);
 
   function handleUserEmailInput(evt) {
     const { value, validity: { valid } } = evt.target;

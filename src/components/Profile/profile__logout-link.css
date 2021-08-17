@@ -5,5 +5,10 @@
   line-height: 1.21;
   text-align: center;
   text-decoration: none;
-  color: #EE3465;
+  color: #ee3465;
+  transition: color 0.2s ease-out;
+}
+
+.profile__logout-link:hover {
+  color: #fff;
 }

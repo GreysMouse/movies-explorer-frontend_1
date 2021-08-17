@@ -4,28 +4,28 @@ import AuthPage from "../AuthPage/AuthPage";
 import AuthFormInput from "../AuthFormInput/AuthFormInput";
 
 function Register(props) {
-  const [userName, setUserName] = React.useState('');
-  const [userEmail, setUserEmail] = React.useState('');
-  const [userPassword, setUserPassword] = React.useState('');
+  const [ userName, setUserName ] = React.useState('');
+  const [ userEmail, setUserEmail ] = React.useState('');
+  const [ userPassword, setUserPassword ] = React.useState('');
 
-  const [isValidUserName, setIsValidUserName] = React.useState(false);
-  const [isValidUserEmail, setIsValidUserEmail] = React.useState(false);
-  const [isValidUserPassword, setIsValidUserPassword] = React.useState(false);
+  const [ isValidUserName, setIsValidUserName ] = React.useState(false);
+  const [ isValidUserEmail, setIsValidUserEmail ] = React.useState(false);
+  const [ isValidUserPassword, setIsValidUserPassword ] = React.useState(false);
 
-  const [userNameSpanText, setUserNameSpanText] = React.useState('Поле не заполнено');
-  const [userEmailSpanText, setUserEmailSpanText] = React.useState('Поле не заполнено');
-  const [userPasswordSpanText, setUserPasswordSpanText] = React.useState('Поле не заполнено');
+  const [ userNameSpanText, setUserNameSpanText ] = React.useState('Поле не заполнено');
+  const [ userEmailSpanText, setUserEmailSpanText ] = React.useState('Поле не заполнено');
+  const [ userPasswordSpanText, setUserPasswordSpanText ] = React.useState('Поле не заполнено');
 
-  const [isUserNameSpanVisible, setIsUserNameSpanVisible] = React.useState(false);
-  const [isUserEmailSpanVisible, setIsUserEmailSpanVisible] = React.useState(false);
-  const [isUserPasswordSpanVisible, setIsUserPasswordSpanVisible] = React.useState(false);
+  const [ isUserNameSpanVisible, setIsUserNameSpanVisible ] = React.useState(false);
+  const [ isUserEmailSpanVisible, setIsUserEmailSpanVisible ] = React.useState(false);
+  const [ isUserPasswordSpanVisible, setIsUserPasswordSpanVisible ] = React.useState(false);
 
-  const [isFormValid, setIsFormValid] = React.useState(true);
+  const [ isFormValid, setIsFormValid ] = React.useState(true);
 
   React.useEffect(() => {
     if (!isValidUserName || !isValidUserEmail || !isValidUserPassword) setIsFormValid(false);
     else setIsFormValid(true);
-  }, [isValidUserName, isValidUserEmail, isValidUserPassword]);
+  }, [ isValidUserName, isValidUserEmail, isValidUserPassword ]);
 
   function handleUserNameInput(evt) {
     const { value, validity: { valid } } = evt.target;

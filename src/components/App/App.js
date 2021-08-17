@@ -14,6 +14,8 @@ import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Menu from '../Menu/Menu';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import ErrorInfoPopup from '../ErrorInfoPopup/ErrorInfoPopup';
+import Preloader from '../Preloader/Preloader';
 
 import './app.css';
 import './app__container.css';
@@ -94,6 +96,8 @@ function App() {
             </Route>
           </Switch>
           <Menu isOpen={ isMenuOpen } onMenuOpen={ handleMenuButtonClick } />
+          <Preloader isActive={ false } />
+          <ErrorInfoPopup isOpen={ false } message="Неверный логин или пароль" />
         </div>
       </div>
     </currentUserContext.Provider>

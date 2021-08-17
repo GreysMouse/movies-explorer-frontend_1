@@ -5,13 +5,21 @@ import './profile-form__input.css';
 import './profile-form__input-label.css';
 import './profile-form__input-label_last.css';
 import './profile-form__submit-button.css';
+import './profile-form__submit-button_disabled.css';
 
 function ProfileForm(props) {
-  const [userName, setUserName] = React.useState('');
-  const [userEmail, setUserEmail] = React.useState('');
+  const [ userName, setUserName ] = React.useState('');
+  const [ userEmail, setUserEmail ] = React.useState('');
 
-  const [isValidUserName, setIsValidUserName] = React.useState(true);
-  const [isValidUserEmail, setIsValidUserEmail] = React.useState(true);
+  const [ isValidUserName, setIsValidUserName ] = React.useState(true);
+  const [ isValidUserEmail, setIsValidUserEmail ] = React.useState(true);
+
+  const [ isFormValid, setIsFormValid ] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!userName && !userEmail) setIsFormValid(false);
+    else setIsFormValid(true);
+  }, [ userName, userEmail ]);
 
   function handleUserNameInput(evt) {
     const { value, validity: { valid } } = evt.target;
@@ -30,7 +38,7 @@ function ProfileForm(props) {
   function handleSubmit(evt) {
     evt.preventDefault();
 
-    if (!isValidUserName || !isValidUserEmail || (!userName && !userEmail)) alert('!');
+    if (!isValidUserName || !isValidUserEmail) alert('!');
     else props.onUserUpdate();
   }
 
@@ -61,8 +69,9 @@ function ProfileForm(props) {
         />
       </label>
       <button
-        className="profile-form__submit-button"
+        className={ 'profile-form__submit-button ' + (isFormValid ? '' : 'profile-form__submit-button_disabled') } 
         onClick={ handleSubmit }
+        disabled={ !isFormValid }
       >
         Редактировать
       </button>
