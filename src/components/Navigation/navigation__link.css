@@ -9,11 +9,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   color: #fff;
-  transition: opacity 0.2s ease-out;
+  transition: color 0.2s ease-out, border-bottom-color 0.2s ease-out;
 }
 
 .navigation__link:hover {
-  opacity: 0.4;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 @media screen and (max-width: 768px) {
@@ -25,6 +25,10 @@
 
   .navigation__link:first-of-type {
     margin-top: 0;
+  }
+
+  .navigation__link:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.4);
   }
 }
 

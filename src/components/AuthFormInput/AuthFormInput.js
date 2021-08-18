@@ -14,6 +14,7 @@ function AuthFormInput(props) {
           maxLength={ props.maxLength }
           placeholder={ props.placeholder }
           autoComplete="off"
+          spellCheck="false"
           required
           type={ props.type }
           value={ props.value }

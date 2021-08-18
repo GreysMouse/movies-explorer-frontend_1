@@ -1,10 +1,10 @@
 .navigation__link_active {
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 @media screen and (max-width: 768px) {
   .navigation__link_active {
-    opacity: 1.0;
+    color: rgba(255, 255, 255, 1.0);
     margin-bottom: -6px;
     padding-bottom: 4px;
     border-bottom: 2px solid #fff;

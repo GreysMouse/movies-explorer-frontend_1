@@ -52,6 +52,7 @@ function ProfileForm(props) {
           maxLength="30"
           placeholder="Введите новое имя"
           autoComplete="off"
+          spellCheck="false"
           type="text"
           value={ userName }
           onChange={ handleUserNameInput }
@@ -63,6 +64,7 @@ function ProfileForm(props) {
           className="profile-form__input"
           placeholder="Введите новый E-mail"
           autoComplete="off"
+          spellCheck="false"
           type="email"
           value={ userEmail }
           onChange={ handleUserEmailInput }

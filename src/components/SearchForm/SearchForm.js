@@ -32,6 +32,7 @@ function SearchForm() {
         className="search-form__input"
         placeholder="Поиск фильма"
         autoComplete="off"
+        spellCheck="false"
         type="text"
         value={ movieTitle }
         onChange={ handleMovieTitleInput }
